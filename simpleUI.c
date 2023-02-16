@@ -2,10 +2,13 @@
 
 main()
 {
-  char str[50];
-
-  printf("> ");
-  fgets(str, 50, stdin);  /* stdin allows for standard input*/
-
-  printf("%s\n", str);
+char *str;
+size_t len = 0;
+  
+  while (str != EOF)
+    {
+      printf("> ");
+      getline(&str, &len, stdin);
+      printf("%s", str);
+    }
 }
