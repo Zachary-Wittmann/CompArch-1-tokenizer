@@ -92,7 +92,7 @@ char *copy_str(char *inStr, short len)
 */
 char **tokenize(char* str)
 {
-  short count = count_word(str);
+  short count = count_words(str);
   char **words = (char**)malloc((count + 1) * sizeof(char *));
   for (int i = 0; i < count; i++)
     {
@@ -107,7 +107,7 @@ char **tokenize(char* str)
 /* Prints all tokens. */
 void print_tokens(char **tokens)
 {
-  for (int i = 0; tokens[i - 1] != 0; i++
+  for (int i = 0; tokens[i - 1] != 0; i++)
 	 printf("\ntokens[%d]: %s\n", i, tokens[i]);
 }
 
